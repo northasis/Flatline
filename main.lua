@@ -3,7 +3,7 @@ if not ok or not content or content == "" then
     return
 end
 
-local Support = loadstring(supportContent)()
+local Support = loadstring(content)()
 local GameID = Support[game.PlaceId]
 if not GameID then 
     return
