@@ -1,11 +1,13 @@
-local Support = {
-    [128039018996175] = "The Walking Dead Online"
-}
-
+local Support = loadstring("https://raw.githubusercontent.com/northasis/grub/refs/heads/main/Games/supported.lua")()
 local GameID = Support[game.PlaceId]
-if not GameID then return end
+if not GameID then 
+    return;
+end
 
-local url = "https://raw.githubusercontent.com/northasis/grub/refs/heads/main/Games/" .. GameID .. ".lua"
-local ok, content = pcall(game.HttpGet, game, url)
-if not ok or not content or content == "" then return end
-loadstring(content)()
+local gameUrl = "https://raw.githubusercontent.com/northasis/grub/refs/heads/main/Games/" .. GameID .. ".lua"
+local okGame, gameContent = pcall(game.HttpGet, game, gameUrl)
+if not okGame or not gameContent or gameContent == "" then 
+    return;
+end
+
+loadstring(gameContent)()
