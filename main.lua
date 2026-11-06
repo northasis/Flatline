@@ -11,4 +11,4 @@ local gameUrl = "https://raw.githubusercontent.com/northasis/Flatline/refs/heads
 local game, main = pcall(game.HttpGet, game, gameUrl)
 if not game or not main or main == "" then return end
 
-loadstring(gameContent)()
+loadstring(main)()
