@@ -1,5 +1,5 @@
 return function()
-    local blacklist = { "Xeno", "Solara", "Volt" }
+    local blacklist = { "Xeno", "Solara" }
 
     local function reject(name)
         local player = game:GetService("Players").LocalPlayer
