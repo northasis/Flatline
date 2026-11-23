@@ -1,3 +1,5 @@
+repeat task.wait() until game:IsLoaded() and game:GetService("Players").LocalPlayer;
+
 local loader = [[
 task.spawn(function()
     local baseUrl = "https://raw.githubusercontent.com/northasis/Flatline/refs/heads/main/"
